@@ -1,16 +1,13 @@
-# note_app
+# Note App
 
 A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+ApiService class'ında çektiğimiz verilerle ilgili bazı değişiklikler yaptım.
+Bu değişiklikler şunlar: 
+- fetchNotes fonksiyonu verileri çektikten sonra herhangi bir bilgi dönmüyor ve bunun yerine ValueNotifier ile oluşturulan noteListNotifier array'i ile tutuluyor.
 
-A few resources to get you started if this is your first Flutter project:
+- ValueNotifier olarak tutulan `isLoadingNotifier` ve `isErrorNotifier` bilgilerini ise yüklenme ve hata durumlarını uygulama genelinde ele almamızı sağlayan notifier'lar olarak tutuyoruz. 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+State yönetimi bu şekilde daha kolay ve yönetilebilir oluyor. Kodları dikkatlice incelemenizi ve yorum satırlarını okumanızı tavsiye ediyorum.
